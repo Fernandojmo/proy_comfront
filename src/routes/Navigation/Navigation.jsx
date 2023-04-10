@@ -38,6 +38,7 @@ const Navigation = () => {
                             {/* <Nav.Link href='/reservas'>Reservas</Nav.Link>
                             <Nav.Link href='/nosotros'>Nosotros</Nav.Link>
                             <Nav.Link href='/contactanos'>Contactanos</Nav.Link> */}
+                            <Nav.Link href='/login' className='text-white bg-dark border-dark rounded m-1 p-2'>Login</Nav.Link>
                             <Nav.Link href='/reservas' className='text-white bg-dark border-dark rounded m-1 p-2'>Reservas</Nav.Link>
 
 
