@@ -7,6 +7,7 @@ import Nosotros from '../../pages/Nosotros/Nosotros';
 import Reservas from '../../pages/Reservas/Reservas';
 import Cartadisp from '../../pages/Menu/Cartadisp';
 import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
 
 const Allroutes = () => {
   return (
@@ -19,6 +20,7 @@ const Allroutes = () => {
             <Route path='/contactanos' element = {<Contactanos/>}/>
             <Route path='/cartadisp' element = {<Cartadisp/>}/>
             <Route path='/login' element = {<Login/>}/>
+            <Route path='/register' element = {<Register/>}/>
         </Route>
     </Routes>
   )

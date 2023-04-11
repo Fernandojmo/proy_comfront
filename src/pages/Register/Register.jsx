@@ -14,11 +14,14 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../context/User/UserContext';
 
-const Login= () => {
+const Register= () => {
 
-    const {loginUser} = useContext(UserContext);
+    const {registerUser} = useContext(UserContext);
 
      const initialValues = {
+        firstname: '',
+        lastname: '',
+        birthday: '',
         email: '',
         password: ''
     }
@@ -31,11 +34,11 @@ const Login= () => {
             [e.target.name]: e.target.value
         }));
     }
-    console.log(user);
+    // console.log(user);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        loginUser(user);
+        registerUser(user);
     }
 
   return (
@@ -53,17 +56,20 @@ const Login= () => {
 
               <div className='d-flex flex-row mt-2'>
                 <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
-                <span className="h1 fw-bold mb-0">Login</span>
+                <span className="h1 fw-bold mb-0">Register</span>
               </div>
 
-              <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>Ingresa a tu cuenta</h5>
+              <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>Crea una cuenta nueva</h5>
 
+                <MDBInput wrapperClass='mb-4' name="firstname" value={user.firstname} onChange={handleChange} label='Nombre' id='formControlLg' type='name' size="lg"/>
+                <MDBInput wrapperClass='mb-4' name="lastname" value={user.lastname} onChange={handleChange} label='Apellido' id='formControlLg' type='name' size="lg"/>
+                <MDBInput wrapperClass='mb-4' name="birthday" value={user.birthday} onChange={handleChange} label='Fecha de nacimiento' id='formControlLg' type='date' size="lg"/>
                 <MDBInput wrapperClass='mb-4' name="email" value={user.email} onChange={handleChange} label='Email' id='formControlLg' type='email' size="lg"/>
-                <MDBInput wrapperClass='mb-4' name="password" value={user.password} onChange={handleChange} label='Contraseña' id='formControlLg' type='password' size="lg"/>
+                <MDBInput wrapperClass='mb-4' name="password" value={user.passwordF} onChange={handleChange} label='Contraseña' id='formControlLg' type='password' size="lg"/>
 
-              <MDBBtn className="mb-4 px-5" type="submit" onClick={handleSubmit} color='dark' size='lg'>Login</MDBBtn>
+              <MDBBtn className="mb-4 px-5" type="submit" onClick={handleSubmit} color='dark' size='lg'>Register</MDBBtn>
               {/* <a className="small text-muted" href="#!">Forgot password?</a> */}
-              <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>No tienes una cuenta? <a href="/register" style={{color: '#393f81'}}>Registrate Aqui</a></p>
+              <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Ya tienes una cuenta? <a href="/login" style={{color: '#393f81'}}>Ingresa Aqui</a></p>
 
               <div className='d-flex flex-row justify-content-start'>
                 <a href="#!" className="small text-muted me-1">Terms of use.</a>
@@ -80,4 +86,4 @@ const Login= () => {
   );
 }
 
-export default Login
+export default Register

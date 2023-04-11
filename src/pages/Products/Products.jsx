@@ -5,9 +5,12 @@ const Products = () => {
     const productContext = useContext(ProductContext);
     const { products, getProducts } = productContext;
     
-    useEffect(() => {
-        getProducts();
-    }, []);
+    // useEffect(() => {
+    //     const getProducts = async () => {
+    //         const products = await axiosClient.get("/products");
+            
+    //         getProducts();
+    // }, []);
     
     return (
         <div>
