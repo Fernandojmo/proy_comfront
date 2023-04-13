@@ -2,6 +2,7 @@ import UserContext from './UserContext'
 import { useReducer } from 'react'
 import userReducer from './UserReducer'
 import axiosClient from '../../config/axiosClient'
+import axios from 'axios'
 
 const UserProvider = ({children}) => {
     const [userState, dispatch] = useReducer(userReducer,{
@@ -41,10 +42,44 @@ const UserProvider = ({children}) => {
         }
     }
 
+    const verifyToken= async()=>{
+       
+        const token= localStorage.getItem("token");
+        console.log(token)
+        if (token) {
+            axiosClient.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+        }
+        else{
+            delete axiosClient.defaults.headers.common["Authorization"];
+        }
+
+        try {
+            const infoUserVerify = await axiosClient.get("/user/verifyUser");
+            dispatch({
+                type: "INFO_USER",
+                payload: infoUserVerify.data.info
+            })
+
+        } catch (error) {
+            console.log(error);
+        }}
+    
+    const logOut = async()=>{
+        try{
+        dispatch({
+            type: "LOGOUT",
+            navigate:"/login"
+        })}catch(error){
+            console.log(error)
+        }
+
+    }
+
+
     const msg ="provider"
 
     return (
-        <UserContext.Provider value={{msg, loginUser, registerUser}}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{msg, loginUser, registerUser, verifyToken, infoUser:userState.infoUser, authStatus:userState.authStatus, logOut}}>{children}</UserContext.Provider>
     )
 }
 

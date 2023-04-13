@@ -3,10 +3,24 @@ import Container from 'react-bootstrap/Container';
 // import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import UserContext from '../../context/User/UserContext';
+import { useContext, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 
 const Navigation = () => {
+  // const name = "Login"
+  const {verifyToken, infoUser, authStatus, logOut} = useContext(UserContext);
+  
+  useEffect(() => {
+    verifyToken()
+    
+  }, [])
+  console.log(infoUser)
+ const name = infoUser.email;
+
+
   return (
     <div>
         {/* <NavLink to='/inicio'>Inicio</NavLink>
@@ -34,27 +48,23 @@ const Navigation = () => {
                         <Offcanvas.Body>
                           <Nav className="justify-content-start flex-grow-1 pe-3">
                             <Nav.Link href='/' className='text-white bg-dark border-dark rounded m-1 p-2'>Inicio</Nav.Link>
-                            <Nav.Link href='/cartadisp' className='text-white bg-dark border-dark rounded m-1 p-2'>Menu</Nav.Link>
+                            <Nav.Link href='/cartadisp' className='text-white bg-dark border-dark rounded m-1 p-2'>cartadisp</Nav.Link>
+                            <Nav.Link href='/menu' className='text-white bg-dark border-dark rounded m-1 p-2'>menu</Nav.Link>
+
                             {/* <Nav.Link href='/reservas'>Reservas</Nav.Link>
                             <Nav.Link href='/nosotros'>Nosotros</Nav.Link>
-                            <Nav.Link href='/contactanos'>Contactanos</Nav.Link> */}
-                            <Nav.Link href='/login' className='text-white bg-dark border-dark rounded m-1 p-2'>Login</Nav.Link>
+                <Nav.Link href='/contactanos'>Contactanos</Nav.Link> */}
                             <Nav.Link href='/reservas' className='text-white bg-dark border-dark rounded m-1 p-2'>Reservas</Nav.Link>
-
-
-                            {/* <NavDropdown
-                              title="Dropdown"
+                            {!authStatus && <Nav.Link href='/login' className='text-white bg-dark border-dark rounded m-1 p-2'>Login</Nav.Link>}
+                           
+                           {authStatus &&
+                            <NavDropdown
+                              title={name}
                               id={`offcanvasNavbarDropdown-expand-${expand}`}
                             >
-                              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                              <NavDropdown.Item href="#action4">
-                                Another action
-                              </NavDropdown.Item>
-                              <NavDropdown.Divider />
-                              <NavDropdown.Item href="#action5">
-                                Something else here
-                              </NavDropdown.Item>
-                            </NavDropdown> */}
+                              <NavDropdown.Item href="/profile">Perfil</NavDropdown.Item>
+                              <NavDropdown.Item onClick={logOut}>Log out</NavDropdown.Item>
+                            </NavDropdown>}
                           </Nav>
                           {/* <Form className="d-flex">
                             <Form.Control

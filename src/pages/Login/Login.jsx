@@ -13,11 +13,12 @@ import {
 import { useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../context/User/UserContext';
+import { navigate, useNavigate } from 'react-router-dom';
 
 const Login= () => {
 
-    const {loginUser} = useContext(UserContext);
-
+    const {loginUser, authStatus} = useContext(UserContext);
+    const navigate = useNavigate();
      const initialValues = {
         email: '',
         password: ''
@@ -34,10 +35,25 @@ const Login= () => {
     console.log(user);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        loginUser(user);
+      e.preventDefault();
+      loginUser(user);
+      
+      setUser(initialValues);
+      const validatelogin=async()=>{
+        try{
+          await loginUser(user);
+          const tokenexist= localStorage.getItem("token")
+        if(tokenexist){
+          navigate("/")
+        }
+        }catch(error){
+          console.log(error)
+        }
+      }
+      validatelogin();
     }
 
+    
   return (
     <MDBContainer className="my-5">
 
@@ -61,7 +77,7 @@ const Login= () => {
                 <MDBInput wrapperClass='mb-4' name="email" value={user.email} onChange={handleChange} label='Email' id='formControlLg' type='email' size="lg"/>
                 <MDBInput wrapperClass='mb-4' name="password" value={user.password} onChange={handleChange} label='Contraseña' id='formControlLg' type='password' size="lg"/>
 
-              <MDBBtn className="mb-4 px-5" type="submit" onClick={handleSubmit} color='dark' size='lg'>Login</MDBBtn>
+              <MDBBtn className="mb-4 px-5" type="submit"  onClick={handleSubmit} color='dark' size='lg'>Login</MDBBtn>
               {/* <a className="small text-muted" href="#!">Forgot password?</a> */}
               <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>No tienes una cuenta? <a href="/register" style={{color: '#393f81'}}>Registrate Aqui</a></p>
 

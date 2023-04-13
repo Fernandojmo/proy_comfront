@@ -39,6 +39,8 @@ const Register= () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         registerUser(user);
+        
+        setUser(initialValues);   
     }
 
   return (

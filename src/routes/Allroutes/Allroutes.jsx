@@ -8,6 +8,7 @@ import Reservas from '../../pages/Reservas/Reservas';
 import Cartadisp from '../../pages/Menu/Cartadisp';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
+import Profile from '../../pages/Profile/Profile';
 
 const Allroutes = () => {
   return (
@@ -21,6 +22,7 @@ const Allroutes = () => {
             <Route path='/cartadisp' element = {<Cartadisp/>}/>
             <Route path='/login' element = {<Login/>}/>
             <Route path='/register' element = {<Register/>}/>
+            <Route path='/profile' element = {<Profile/>}/>
         </Route>
     </Routes>
   )
