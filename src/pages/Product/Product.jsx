@@ -70,20 +70,8 @@ const Product = () => {
                   </div>
                   <div className="d-flex justify-content-center mt-4">
                     
-                  {stock === 0 ? (
-                    <h4 className="text-red-800 no-underline">Sin Stock</h4>
-                  ) : (
-                    <Link to="/crear-cuenta">
-                      {" "}
-                      <button
-                        type="button"
-                        // className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        onClick="{handleAdd}" 
-                      >
-                        Añadir
-                      </button>
-                      </Link>
-                  )}
+                    
+
                     <MDBBtn className="mb-4 px-5" type="submit"  onClick="{handleSubmit}" color='dark' size='lg'>Agregar al carrito</MDBBtn>
                   </div>
                 </MDBCardBody>
