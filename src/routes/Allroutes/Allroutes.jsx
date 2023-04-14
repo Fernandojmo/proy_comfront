@@ -1,4 +1,4 @@
-import { Routes , Route } from 'react-router-dom';
+import { Routes , Route, Navigate } from 'react-router-dom';
 import Layout from '../Layout/Layout';
 import Contactanos from '../../pages/Contactanos/Contactanos';
 import Inicio from '../../pages/Inicio/Inicio';
@@ -9,6 +9,7 @@ import Cartadisp from '../../pages/Menu/Cartadisp';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Profile from '../../pages/Profile/Profile';
+import Product from '../../pages/Product/Product';
 
 const Allroutes = () => {
   return (
@@ -23,6 +24,8 @@ const Allroutes = () => {
             <Route path='/login' element = {<Login/>}/>
             <Route path='/register' element = {<Register/>}/>
             <Route path='/profile' element = {<Profile/>}/>
+            <Route path='/product/:id' element = {<Product/>}/>
+            <Route path='*' element={<Navigate to='/'/>}/>
         </Route>
     </Routes>
   )

@@ -14,10 +14,10 @@ const Navigation = () => {
   const {verifyToken, infoUser, authStatus, logOut} = useContext(UserContext);
   
   useEffect(() => {
-    verifyToken()
+    verifyToken();
     
   }, [])
-  console.log(infoUser)
+  // console.log(infoUser)
  const name = infoUser.email;
 
 
@@ -55,6 +55,7 @@ const Navigation = () => {
                             <Nav.Link href='/nosotros'>Nosotros</Nav.Link>
                 <Nav.Link href='/contactanos'>Contactanos</Nav.Link> */}
                             <Nav.Link href='/reservas' className='text-white bg-dark border-dark rounded m-1 p-2'>Reservas</Nav.Link>
+                            <Nav.Link href='/product' className='text-white bg-dark border-dark rounded m-1 p-2'>Product</Nav.Link>
                             {!authStatus && <Nav.Link href='/login' className='text-white bg-dark border-dark rounded m-1 p-2'>Login</Nav.Link>}
                            
                            {authStatus &&

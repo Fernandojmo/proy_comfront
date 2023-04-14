@@ -4,8 +4,9 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 // import Cartadisp from '../pages/Menu/Cartadisp'
+import { Link } from 'react-router-dom';
 
-const Tarjeta = ({menu , setMenu}) => {
+const Tarjeta = ({menu}) => {
     // const info = Cartadisp();
     console.log(menu);
   return (
@@ -54,7 +55,7 @@ const Tarjeta = ({menu , setMenu}) => {
                 <ul>
                 {
                   menu.map(plato=>(
-                    <li key={plato.id}>
+                    <li key={plato._id}>
                       <p>{plato.categoria}</p>
                     </li>
                   ))
@@ -65,21 +66,25 @@ const Tarjeta = ({menu , setMenu}) => {
             </Col>
             <Col xs={12} sm={9} md={10}>
               <div id="contenedorcartas" className='m-2 p-2 border border-warning rounded'>
+                
                 <Row xs={1} sm={2} md={3} lg={4} xl={5} xxl={6} className="g-4">
                   {menu.map(plato=> (
-                    <Col key={plato.id}>
+                    <Col key={plato._id}>
                       <Card className="text-center" style={{ height: '33rem',width: '11rem', margin:'auto', text:'center'}}>
-                      <Card.Img variant="top" width='250rem' src={plato.image} />
+                      <Link to={`/product/${plato._id}`}>
+                        <Card.Img variant="top" width='250rem' src={plato.image} />
+                      </Link>
                       <Card.Body>
-                        <Card.Title>{plato.nombre}</Card.Title>
-                        <Card.Text>${plato.precio}</Card.Text>
-                        <Card.Text>{plato.descripcion}</Card.Text>
+                          <Card.Title>{plato.name}</Card.Title>
+                          <Card.Text>${plato.price}</Card.Text>
+                         <Card.Text>{plato.description}</Card.Text>
                         <Button variant="primary">Agregar al carrito</Button>
                       </Card.Body>
                       </Card>
                     </Col>
                     ))}
                 </Row>
+                
               </div>
             </Col>
           </Row>

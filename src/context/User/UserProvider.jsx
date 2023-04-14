@@ -45,7 +45,7 @@ const UserProvider = ({children}) => {
     const verifyToken= async()=>{
        
         const token= localStorage.getItem("token");
-        console.log(token)
+        // console.log(token)
         if (token) {
             axiosClient.defaults.headers.common["Authorization"] = `Bearer ${token}`;
         }
@@ -61,7 +61,7 @@ const UserProvider = ({children}) => {
             })
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }}
     
     const logOut = async()=>{

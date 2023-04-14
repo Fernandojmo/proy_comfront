@@ -42,7 +42,10 @@ const Login= () => {
       const validatelogin=async()=>{
         try{
           await loginUser(user);
+         
+          console.log(user)
           const tokenexist= localStorage.getItem("token")
+          console.log(tokenexist)
         if(tokenexist){
           navigate("/")
         }
