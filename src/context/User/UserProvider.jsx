@@ -2,7 +2,6 @@ import UserContext from './UserContext'
 import { useReducer } from 'react'
 import userReducer from './UserReducer'
 import axiosClient from '../../config/axiosClient'
-import axios from 'axios'
 
 const UserProvider = ({children}) => {
     const [userState, dispatch] = useReducer(userReducer,{
@@ -43,7 +42,7 @@ const UserProvider = ({children}) => {
     }
 
     const verifyToken= async()=>{
-       
+       console.log("verifyToken")
         const token= localStorage.getItem("token");
         // console.log(token)
         if (token) {

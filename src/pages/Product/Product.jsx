@@ -1,9 +1,8 @@
 
 import ProductContext from "../../context/Product/ProductContext";
-import { useContext, useEffect } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-// import CartContext from "../../context/cart/CartContext";
-import Productpage from "../../components/Productpage";
+import CartContext from "../../context/Cart/CartContext";
 import {
   MDBContainer,
   MDBRow,
@@ -15,15 +14,27 @@ import {
   MDBIcon,
   MDBBtn,
 } from "mdb-react-ui-kit";
+import { Button } from "bootstrap";
+
 const Product = () => {
   const { id } = useParams();
 
   const { getProduct, product } = useContext(ProductContext);
-//   const { addItemToCart, cartCount } = useContext(CartContext)
+  const { addItemToCart, cartCount } = useContext(CartContext)
 
-//   const handleAdd = () => { if(cartCount < stock) addItemToCart(product[0])}
+ 
 
-  const { name, stock, price, image, SKU, description } = product[0];
+  const handleAdd = () => { 
+    if(cartCount < stock){
+      console.log(cartCount)
+      console.log(product[0])
+      addItemToCart(product[0])
+    }else{
+      console.log("error al agregar producto, stock insuficiente")
+    }
+  }
+
+   const { name, stock, price, image, SKU, description } = product[0];
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -32,8 +43,9 @@ const Product = () => {
     fetchProduct();
   }, []);
 
-   console.log(name)
+   console.log(product[0])
     return (
+      <>
       <MDBContainer fluid className="my-5">
       <MDBRow className="justify-content-center">
         <MDBCol md="10">
@@ -70,9 +82,6 @@ const Product = () => {
                   </div>
                   <div className="d-flex justify-content-center mt-4">
                     
-                    
-
-                    <MDBBtn className="mb-4 px-5" type="submit"  onClick="{handleSubmit}" color='dark' size='lg'>Agregar al carrito</MDBBtn>
                   </div>
                 </MDBCardBody>
               </MDBCol>
@@ -80,7 +89,7 @@ const Product = () => {
           </MDBCard>
         </MDBCol>
       </MDBRow>
-    </MDBContainer>
+    </MDBContainer><button className="mb-4 px-5" type="button"  onClick={handleAdd} >Agregar al carrito</button></>
     )
     }
     export default Product;
