@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import UserProvider from './context/User/UserProvider';
 import ProductProvider from './context/Product/ProductProvider';
 import CartProvider from './context/Cart/CartProvider';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

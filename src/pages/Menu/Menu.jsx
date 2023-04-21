@@ -11,9 +11,15 @@ const Menu = () => {
         }
         fetchProducts()
     },[])
+    
     console.log(products)
+
+    const categories = products.map((product) => product.cat);
+    const uniqueCategories = [...new Set(categories)];
+    console.log(uniqueCategories);
+
   return (
-    <Tarjeta menu={products}/>
+    <><Tarjeta menu={products} uniqueCategories={uniqueCategories}/></>
   )
 }
 

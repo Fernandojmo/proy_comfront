@@ -13,6 +13,8 @@ const productReducer =(state,action)=>{
                     description:"",
                     price:"",
                     stock:"",
+                    detail:"",
+                    cat:"",
                 }]
             }
         case "GET_PRODUCT":

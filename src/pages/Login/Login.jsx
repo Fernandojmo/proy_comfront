@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../context/User/UserContext';
 import { navigate, useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const Login= () => {
 
@@ -72,7 +73,7 @@ const Login= () => {
 
               <div className='d-flex flex-row mt-2'>
                 <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
-                <span className="h1 fw-bold mb-0">Login</span>
+                <span className="h1 fw-bold mb-0">Inicia sesion</span>
               </div>
 
               <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>Ingresa a tu cuenta</h5>
@@ -80,7 +81,7 @@ const Login= () => {
                 <MDBInput wrapperClass='mb-4' name="email" value={user.email} onChange={handleChange} label='Email' id='formControlLg' type='email' size="lg"/>
                 <MDBInput wrapperClass='mb-4' name="password" value={user.password} onChange={handleChange} label='Contraseña' id='formControlLg' type='password' size="lg"/>
 
-              <MDBBtn className="mb-4 px-5" type="submit"  onClick={handleSubmit} color='dark' size='lg'>Login</MDBBtn>
+              <Button variant="warning" className="mb-4 px-5" type="submit"  onClick={handleSubmit} color='dark' size='lg'>Login</Button>
               {/* <a className="small text-muted" href="#!">Forgot password?</a> */}
               <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>No tienes una cuenta? <a href="/register" style={{color: '#393f81'}}>Registrate Aqui</a></p>
 

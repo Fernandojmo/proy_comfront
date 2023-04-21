@@ -47,18 +47,18 @@ const Navigation = () => {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                           <Nav className="justify-content-start flex-grow-1 pe-3">
-                            <Nav.Link as={NavLink} to='/' className='text-white bg-dark border-dark rounded m-1 p-2'>Inicio</Nav.Link>
+                            <Nav.Link as={NavLink} to='/' className='btn btn-warning rounded m-1 p-2'>Inicio</Nav.Link>
                             {/* <Nav.Link href='/cartadisp' className='text-white bg-dark border-dark rounded m-1 p-2'>cartadisp</Nav.Link> */}
                             
 
                             {/* <Nav.Link href='/reservas'>Reservas</Nav.Link>
                             <Nav.Link href='/nosotros'>Nosotros</Nav.Link>
                             <Nav.Link href='/contactanos'>Contactanos</Nav.Link> */}
-                            <Nav.Link as={NavLink} to='/reservas' className='text-white bg-dark border-dark rounded m-1 p-2'>Reservas</Nav.Link>
+                            <Nav.Link as={NavLink} to='/reservas' className='btn btn-warning rounded m-1 p-2'>Reservas</Nav.Link>
                             {/* <Nav.Link href='/product' className='text-white bg-dark border-dark rounded m-1 p-2'>Product</Nav.Link> */}
-                            <Nav.Link as={NavLink} to='/menu' className='text-white bg-dark border-dark rounded m-1 p-2'>menu</Nav.Link>
-                            <Nav.Link as={NavLink} to='/checkout' className='text-white bg-dark border-dark rounded m-1 p-2'>Check Out</Nav.Link>
-                            {!authStatus && <Nav.Link as={NavLink} to='/login' className='text-white bg-dark border-dark rounded m-1 p-2'>Login</Nav.Link>}
+                            <Nav.Link as={NavLink} to='/menu' className='btn btn-warning rounded m-1 p-2'>menu</Nav.Link>
+                            <Nav.Link as={NavLink} to='/checkout' className='btn btn-warning rounded m-1 p-2'>Check Out</Nav.Link>
+                            {!authStatus && <Nav.Link as={NavLink} to='/login' className='btn btn-warning rounded m-1 p-2'>Login</Nav.Link>}
                            
                            {authStatus &&
                             <NavDropdown

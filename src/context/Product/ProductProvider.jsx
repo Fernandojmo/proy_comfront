@@ -14,6 +14,8 @@ const ProductProvider=({children})=>{
             description:"",
             price:"",
             stock:"",
+            detail:"",
+            cat:"",
         }]
     }
 

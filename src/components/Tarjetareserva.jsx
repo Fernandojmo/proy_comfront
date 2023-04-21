@@ -21,7 +21,7 @@ const Tarjetareserva = ({reservas , setReserva}) => {
                     <Card.Text>Mesa N°: {reserva.mesa}</Card.Text>
                     <Card.Text>Dia: {reserva.fecha}</Card.Text>
                     <Card.Text> Hora: {reserva.hora}</Card.Text>
-                    <Button variant="primary">Cancelar reserva</Button>
+                    <Button variant="warning">Cancelar reserva</Button>
                 </Card.Body>
                 </Card>
                 </Col>

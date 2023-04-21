@@ -119,7 +119,7 @@ const Reservas = () => {
                       label="Confirmar Reserva"
                   />
                 </Form.Group>
-                <Button type="submit" className='m-2'>Reservar</Button>
+                <Button type="submit" variant="warning" className='m-2'>Reservar</Button>
               </fieldset>
             </Form>
             <Tarjetareserva reservas={reserva} setReserva={setReserva}/> 

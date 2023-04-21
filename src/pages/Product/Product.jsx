@@ -14,7 +14,8 @@ import {
   MDBIcon,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { Button } from "bootstrap";
+import Button from 'react-bootstrap/Button';
+
 
 const Product = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const Product = () => {
  
 
   const handleAdd = () => { 
-    if(cartCount < stock){
+    if(cartCount <= stock){
       console.log(cartCount)
       console.log(product[0])
       addItemToCart(product[0])
@@ -34,7 +35,7 @@ const Product = () => {
     }
   }
 
-   const { name, stock, price, image, SKU, description } = product[0];
+   const { name, stock, price, image, SKU, description,detail ,cat } = product[0];
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -65,6 +66,7 @@ const Product = () => {
                   <div className="text-center">
                     <MDBCardTitle>{name}</MDBCardTitle>
                     <p className="text-muted mb-4">{description}</p>
+                    <p className="text-muted mb-4">{detail}</p>
                   </div>
                   <div className="d-flex justify-content-between total font-weight-bold mt-4">
                     <span>Precio:</span>
@@ -81,7 +83,8 @@ const Product = () => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-4">
-                    
+                  <Link to={`/menu`}><Button className="mb-4 px-5 m-2 p-2" type="button"  variant="warning">Atras</Button></Link>
+                    <Button className="mb-4 px-5 m-2 p-2" type="button"  onClick={handleAdd} variant="warning">Comprar</Button>
                   </div>
                 </MDBCardBody>
               </MDBCol>
@@ -89,7 +92,7 @@ const Product = () => {
           </MDBCard>
         </MDBCol>
       </MDBRow>
-    </MDBContainer><button className="mb-4 px-5" type="button"  onClick={handleAdd} >Agregar al carrito</button></>
+    </MDBContainer></>
     )
     }
     export default Product;
