@@ -18,3 +18,6 @@ La bodega cervecera es un Resto-bar que busca difundir la cultura cervecera a lo
 11. Repositorio Github
 12. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app`
 13. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app)
+`Para acceder a sección Login Utilizar el siguiente usuario:`
+`Usuario: CorreoPrueba@gmail.com`
+`Contraseña: Prueba123`
