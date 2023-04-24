@@ -57,7 +57,9 @@ const Profile = () => {
   // }
 
   return (
-    <Profilecard userProfile={infoUser}/>
+    <div className='d-flex'>
+      <Profilecard userProfile={infoUser}/>
+    </div>
     
   )
 }
