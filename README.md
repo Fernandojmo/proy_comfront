@@ -14,6 +14,7 @@ La bodega cervecera es un Resto-bar que busca difundir la cultura cervecera a lo
 7. Seccion Inicio, Menu (productos), Login (inicio de sesion), Register (registo de cuenta), Profile (perfil de usuario), Reservas (reservas en restaurante), Carrito de compras, CheckOut (pago de productos en carrito de compras) y boton de pago PayPal.
 8. Base de datos para reservas API Rest en firebase.
 9. Base de datos para Menu y usuarios en MongoDB cargado en app Render.
-9. Repositorio Github
-10. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app`
-11. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app)
+10. Diseño de pagina en figma, cargado en formato PDF con el nombre Diseño.pdf
+11. Repositorio Github
+12. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app`
+13. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app)
