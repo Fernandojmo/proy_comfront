@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  MDBBtn,
   MDBContainer,
   MDBCard,
   MDBCardBody,
@@ -13,7 +12,7 @@ import {
 import { useState } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../context/User/UserContext';
-import { navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 const Login= () => {

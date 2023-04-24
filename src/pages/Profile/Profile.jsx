@@ -9,7 +9,7 @@ const Profile = () => {
   const {firstname, lastname, email} = infoUser
   // const {firstname, lastname, email, phone, dir, city, country, reg} = infoUser
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const [userForm, setUserForm] = useState({
     firstname:"",
@@ -22,16 +22,16 @@ const Profile = () => {
     // reg:""
   })
 
-  const handleChange = async(e) => {
-    setUserForm({
-      ...userForm,
-      [e.target.name]: e.target.value
-    })
-  }
+  // const handleChange = async(e) => {
+  //   setUserForm({
+  //     ...userForm,
+  //     [e.target.name]: e.target.value
+  //   })
+  // }
 
-  const sendData = () => {
-    userEdit(userForm)
-  }
+  // const sendData = () => {
+  //   userEdit(userForm)
+  // }
 
   useEffect(() => {
     const updateData = () => {

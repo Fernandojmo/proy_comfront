@@ -21,7 +21,7 @@ const Tarjeta = ({menu,uniqueCategories}) => {
       if(category==="All"){
         return menu;
       }else{
-        return menu.filter((product)=>product.cat==category);
+        return menu.filter((product)=>product.cat===category);
       }
     }
     setNewmenu(aplicatefilter(menu,category));

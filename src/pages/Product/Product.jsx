@@ -12,7 +12,6 @@ import {
   MDBCardImage,
   MDBCardTitle,
   MDBIcon,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 import Button from 'react-bootstrap/Button';
 
