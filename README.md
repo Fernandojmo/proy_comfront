@@ -15,5 +15,5 @@ La bodega cervecera es un Resto-bar que busca difundir la cultura cervecera a lo
 8. Base de datos para reservas API Rest en firebase.
 9. Base de datos para Menu y usuarios en MongoDB cargado en app Render.
 9. Repositorio Github
-10. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app/checkout`
-11. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app/checkout)
+10. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app`
+11. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app)
