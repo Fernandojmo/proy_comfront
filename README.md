@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Bienvenidos al proyecto App de comercio electronico FRONT-END de Fernando Melo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto se realizo en React en conjunto con React Boostrap, MDB boostrap y SCSS como herramientas de estilos.
+La bodega cervecera es un Resto-bar que busca difundir la cultura cervecera a lo largo de la ciudad de curicò, en donde ofrece un menu de cervezas y reservas en su restaurante.
 
-## Available Scripts
+## concideraciones
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Responsivo a moviles
+2. Header Navbar.
+3. Footer.
+4. Estilos con herramientas React boostrap, MDB React y SCSS.
+5. Componentes y respectivas Props.
+6. Hooks, useState, useEffect, useReducer.
+7. Seccion Inicio, Menu (productos), Login (inicio de sesion), Register (registo de cuenta), Profile (perfil de usuario), Reservas (reservas en restaurante), Carrito de compras, CheckOut (pago de productos en carrito de compras) y boton de pago PayPal.
+8. Base de datos para reservas API Rest en firebase.
+9. Base de datos para Menu y usuarios en MongoDB cargado en app Render.
+10. Diseño de pagina en figma, cargado en formato PDF con el nombre Diseño.pdf
+11. Repositorio Github
+12. Despliegue en netlify con CI= npm build : `https://resplendent-panda-dc59f7.netlify.app`
+13. [Link a pagina WEB](https://resplendent-panda-dc59f7.netlify.app)
+14. `Para acceder a sección Login Utilizar el siguiente usuario:`
+`Usuario: CorreoPrueba@gmail.com`
+`Contraseña: Prueba123`
