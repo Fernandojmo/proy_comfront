@@ -1,5 +1,6 @@
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon, MDBBtn } from 'mdb-react-ui-kit';
+import Button from 'react-bootstrap/Button';
 
 const Profilecard = (userProfile) => {
   return (
@@ -60,7 +61,7 @@ const Profilecard = (userProfile) => {
                     <MDBCardText className="text-muted">Metropolitana</MDBCardText>
                   </MDBCol>
                 </MDBRow>
-                <MDBBtn className="mb-4 px-5" type="submit" color='dark' size='lg'>Editar</MDBBtn>
+                <Button variant="warning" className="mb-4 px-5" type="submit" color='dark' size='lg'>Editar</Button>
 
                 <div className="d-flex justify-content-start">
                   <a href="#!"><MDBIcon fab icon="facebook me-3" size="lg" /></a>
