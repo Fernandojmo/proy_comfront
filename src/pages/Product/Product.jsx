@@ -34,7 +34,7 @@ const Product = () => {
     }
   }
 
-   const { name, stock, price, image, SKU, description,detail ,cat } = product[0];
+  const { name, stock, price, image, SKU, description,detail ,cat } = product[0];
 
   useEffect(() => {
     const fetchProduct = async () => {
